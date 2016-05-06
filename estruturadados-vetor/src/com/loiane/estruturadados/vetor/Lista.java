@@ -31,20 +31,16 @@ public class Lista<T> {
 	// B C E F G + +
 	//
 	public boolean adiciona(int posicao, T elemento){
-		
 		if (!(posicao >= 0 && posicao < tamanho)){
 			throw new IllegalArgumentException("Posição inválida");
 		}
-		
 		this.aumentaCapacidade();
-		
 		//mover todos os elementos
 		for (int i=this.tamanho-1; i>=posicao; i--){
 			this.elementos[i+1] = this.elementos[i];
 		}
 		this.elementos[posicao] = elemento;
 		this.tamanho++;
-		
 		return true;
 	}
 	
@@ -58,7 +54,8 @@ public class Lista<T> {
 		}
 	}
 	
-	public Object busca(int posicao){
+	//Exercício 04
+	public Object obtem(int posicao){
 		if (!(posicao >= 0 && posicao < tamanho)){
 			throw new IllegalArgumentException("Posição inválida");
 		} 
@@ -126,6 +123,22 @@ public class Lista<T> {
 			this.elementos[i] = this.elementos[i+1];
 		}
 		this.tamanho--;
+	}
+	
+	//Exercício 03
+	public void remove(T elemento){
+		int pos = busca(elemento);
+		if(pos > -1){
+			remove(pos);
+		}
+	}
+	
+	//Exercício 05
+	public void limpa(){
+		for(int i=0; i<this.elementos.length; i++){
+			this.elementos[i] = null;
+		}
+		this.tamanho = 0;
 	}
 	
 	public int tamanho(){

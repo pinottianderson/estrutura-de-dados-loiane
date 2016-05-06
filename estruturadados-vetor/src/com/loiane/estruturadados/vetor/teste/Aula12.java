@@ -37,6 +37,7 @@ public class Aula12 {
 		System.out.println(arrayList.size());
 		
 		System.out.println(arrayList.lastIndexOf("c"));
+		arrayList.clear();
 		
 	}
 

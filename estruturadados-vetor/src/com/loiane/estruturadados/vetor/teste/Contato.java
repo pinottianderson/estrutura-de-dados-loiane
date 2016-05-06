@@ -12,6 +12,11 @@ public class Contato {
 		this.telefone = telefone;
 		this.email = email;
 	}
+	
+	public Contato(String nome) {
+		super();
+		this.nome = nome;
+	}
 
 	public Contato() {}
 	
@@ -36,8 +41,7 @@ public class Contato {
 
 	@Override
 	public String toString() {
-		return "Contato [nome=" + nome + ", telefone=" + telefone + ", email="
-				+ email + "]";
+		return "Contato [nome=" + nome + "]";
 	}
 
 	@Override

@@ -1,22 +1,26 @@
 package com.loiane.estruturadados.vetor.labs;
 
-import com.loiane.estruturadados.vetor.Lista;
+import java.util.ArrayList;
+
 import com.loiane.estruturadados.vetor.teste.Contato;
 
-public class Exec05 {
+public class Exec07 {
 
 	public static void main(String[] args) {
-		Lista<Contato> lista = new Lista<Contato>(20);
+		ArrayList<Contato> lista = new ArrayList<Contato>();
 		Contato contato;
 				
 		for(int i=0; i<20; i++){
 			contato = new Contato("Contato "+i);
-			lista.adiciona(contato);
-		}
+			lista.add(contato);
+		}	
 		System.out.println(lista);
-		lista.limpa();
+		lista.add(0, new Contato("Anderson"));
 		System.out.println(lista);
-
+		System.out.println(lista.get(1));
+		lista.remove(0);
+		System.out.println(lista);
+		System.out.println(lista.size());
 	}
 
 }

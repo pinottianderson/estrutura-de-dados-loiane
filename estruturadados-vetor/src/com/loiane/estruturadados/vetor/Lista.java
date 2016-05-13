@@ -55,7 +55,7 @@ public class Lista<T> {
 	}
 	
 	//Exercício 04
-	public Object obtem(int posicao){
+	public T obtem(int posicao){
 		if (!(posicao >= 0 && posicao < tamanho)){
 			throw new IllegalArgumentException("Posição inválida");
 		} 
@@ -135,10 +135,16 @@ public class Lista<T> {
 	
 	//Exercício 05
 	public void limpa(){
-		for(int i=0; i<this.elementos.length; i++){
+		for(int i=0; i<this.tamanho; i++){
 			this.elementos[i] = null;
 		}
 		this.tamanho = 0;
+	}
+	public void limpaLoiane1(){
+		this.elementos = (T[]) new Object[this.elementos.length];
+	}
+	public void limpaLoiane2(){
+		this.tamanho = 0;		
 	}
 	
 	public int tamanho(){

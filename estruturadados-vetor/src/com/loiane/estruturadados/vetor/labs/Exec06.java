@@ -9,7 +9,7 @@ public class Exec06 {
 
 	public static void main(String[] args) {
 		
-		//Criação das variáveis
+		//Criaï¿½ï¿½o das variï¿½veis
 		Scanner scan = new Scanner(System.in);
 		
 		//Criar vetor com 20 de capacidade
@@ -18,7 +18,7 @@ public class Exec06 {
 		//Criar e adicionar 30 contatos
 		criarContatosDinamicamente(5, lista);
 				
-		//1 - Criar um menu para que o usuário escolha as opções
+		//1 - Criar um menu para que o usuï¿½rio escolha as opï¿½ï¿½es
 		
 		
 	}
@@ -28,15 +28,15 @@ public class Exec06 {
 		boolean entradaValida = false;
 		
 		while (!entradaValida){
-			System.out.println("Digite a opção desejada:");
+			System.out.println("Digite a opï¿½ï¿½o desejada:");
 			System.out.println("0: Sair");
 			System.out.println("1: Adiciona contato no final do vetor");
-			System.out.println("2: Adiciona contato em uma posição específica");
-			System.out.println("3: Busca contato de uma posição específica");
+			System.out.println("2: Adiciona contato em uma posiï¿½ï¿½o especï¿½fica");
+			System.out.println("3: Busca contato de uma posiï¿½ï¿½o especï¿½fica");
 			System.out.println("4: Busca contato");
-			System.out.println("5: Consulta último índica do contato");
+			System.out.println("5: Consulta ï¿½ltimo ï¿½ndica do contato");
 			System.out.println("6: Verifica se contato existe");
-			System.out.println("7: Remove por posição");
+			System.out.println("7: Remove por posiï¿½ï¿½o");
 			System.out.println("8: Excluir contato");
 			System.out.println("9: Verifica tamanho do vetor");
 			System.out.println("10: Excluir todos os contato do vetor");

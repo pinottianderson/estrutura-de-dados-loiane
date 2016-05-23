@@ -12,9 +12,8 @@ public class Lista<T> {
 		this.tamanho = 0;
 	}
 	
-	public Lista(int capacidade, Class<T> tipoClasse){
-		this.elementos = (T[]) Array.newInstance(tipoClasse, capacidade);
-		this.tamanho = 0;
+	public Lista(){
+		this(10);
 	}
 
 	public boolean adiciona(T elemento) {

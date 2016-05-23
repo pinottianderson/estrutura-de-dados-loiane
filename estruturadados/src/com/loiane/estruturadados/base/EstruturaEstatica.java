@@ -4,8 +4,8 @@ import java.lang.reflect.Array;
 
 public class EstruturaEstatica<T> {
 	
-	private T[] elementos; 
-	private int tamanho;
+	protected T[] elementos; 
+	protected int tamanho;
 
 	//Solução mais elegante que a debaixo
 	public EstruturaEstatica(int capacidade){
@@ -41,7 +41,7 @@ public class EstruturaEstatica<T> {
 		return true;
 	}
 	
-	private void aumentaCapacidade(){
+	protected void aumentaCapacidade(){
 		if (this.tamanho == this.elementos.length){
 			T[] elementosNovos = (T[])new Object[this.elementos.length * 2];
 			for (int i=0; i<this.elementos.length; i++){
@@ -49,6 +49,10 @@ public class EstruturaEstatica<T> {
 			}
 			this.elementos = elementosNovos;
 		}
+	}
+	
+	public boolean estaVazia(){
+		return this.tamanho == 0;
 	}
 	
 	public int tamanho(){
